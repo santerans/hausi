@@ -19,7 +19,7 @@ window.onload = function(){
     }
 
     if (ubicacion !== false) {
-        var ubi = place.replace('-',' ').toLowerCase().replace(/\b[a-z]/g, function(letter) {
+        var ubi = ubicacion.replace('-',' ').toLowerCase().replace(/\b[a-z]/g, function(letter) {
             return letter.toUpperCase();
         });
         var posUbi1 = ubi.indexOf(',');
