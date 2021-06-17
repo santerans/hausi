@@ -15,7 +15,7 @@ window.onload = function(){
 //        if (ubicacion === false){
 //            $('.place').attr('filter-by',lugar);
 //            $('.place').click();
-        }
+//        }
     }
 
     if (ubicacion !== false) {
