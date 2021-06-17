@@ -22,9 +22,10 @@ window.onload = function(){
         var ubi = ubicacion.replace('-',' ').toLowerCase().replace(/\b[a-z]/g, function(letter) {
             return letter.toUpperCase();
         });
-        var posUbi1 = ubi.indexOf(',');
-        var posUbi2 = ubi.indexOf(',',posUbi1);
-        var subSUbi = posUbi.substr(posUbi1,posUbi2);
+        var posUbiUno = ubi.indexOf(',');
+        var posUbiDos = ubi.indexOf(',',posUbiUno);
+        var subSUbi = posUbi.substr(posUbi1,posUbiDos);
+        console.log(subSUbi);
         $('.place').attr('filter-by',subSUbi);
         $('.place').click();
         
