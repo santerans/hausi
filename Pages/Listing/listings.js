@@ -11,10 +11,10 @@ window.onload = function(){
         var lugar = place.replace('-',' ').toLowerCase().replace(/\b[a-z]/g, function(letter) {
             return letter.toUpperCase();
         });    
-        $('.searchbar').val(lugar);
-        if (ubicacion === false){
-            $('.place').attr('filter-by',lugar);
-            $('.place').click();
+//        $('.searchbar').val(lugar);
+//        if (ubicacion === false){
+//            $('.place').attr('filter-by',lugar);
+//            $('.place').click();
         }
     }
 
@@ -22,9 +22,10 @@ window.onload = function(){
         var ubi = place.replace('-',' ').toLowerCase().replace(/\b[a-z]/g, function(letter) {
             return letter.toUpperCase();
         });
-        var posUbi = ubi.indexOf(',');
-        var subSUbi = posUbi.subs
-        $('.place').attr('filter-by',ubi);
+        var posUbi1 = ubi.indexOf(',');
+        var posUbi2 = ubi.indexOf(',',posUbi1);
+        var subSUbi = posUbi.substr(posUbi1,posUbi2);
+        $('.place').attr('filter-by',subSUbi);
         $('.place').click();
         
     }
