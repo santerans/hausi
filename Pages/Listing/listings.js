@@ -19,14 +19,13 @@ window.onload = function(){
     }
 
     if (ubicacion !== false) {
+        var ubicacionSplit = ubicacion.split(",");
+        var posUbi = ubicacionSplit[0];
         var ubi = ubicacion.replace('-',' ').toLowerCase().replace(/\b[a-z]/g, function(letter) {
             return letter.toUpperCase();
         });
-        var posUbiUno = ubi.indexOf(',');
-        var posUbiDos = ubi.indexOf(',',posUbiUno);
-        var subSUbi = posUbi.substr(posUbi1,posUbiDos);
-        console.log(subSUbi);
-        $('.place').attr('filter-by',subSUbi);
+        $('.searchbar').val(posUbi);
+        $('.place').attr('filter-by',ubi);
         $('.place').click();
         
     }
