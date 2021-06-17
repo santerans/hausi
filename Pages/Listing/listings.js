@@ -5,25 +5,24 @@ window.onload = function(){
 
     var badge = getUrlParameter('badge');
     var place = getUrlParameter('lugar');
-    var ubicacion = getUrlParameter('ubicacion');
 
-    if (place !== false) {
-        var lugar = place.replace('-',' ').toLowerCase().replace(/\b[a-z]/g, function(letter) {
-            return letter.toUpperCase();
-        });    
+//     if (place !== false) {
+//         var lugar = place.replace('-',' ').toLowerCase().replace(/\b[a-z]/g, function(letter) {
+//             return letter.toUpperCase();
+//         });    
 //        $('.searchbar').val(lugar);
 //        if (ubicacion === false){
 //            $('.place').attr('filter-by',lugar);
 //            $('.place').click();
 //        }
-    }
+//     }
 
-    if (ubicacion !== false) {
-        var ubicacionSplit = ubicacion.split(",");
-        var posUbi = ubicacionSplit[0];
-        var ubi = ubicacion.replace('-',' ').toLowerCase().replace(/\b[a-z]/g, function(letter) {
+    if (place !== false) {
+        var ubi = place.replace('-',' ').toLowerCase().replace(/\b[a-z]/g, function(letter) {
             return letter.toUpperCase();
         });
+        ubicacionSplit = ubi.split(",");
+        var posUbi = ubicacionSplit[0];
         $('.searchbar').val(posUbi);
         $('.place').attr('filter-by',ubi);
         $('.place').click();
