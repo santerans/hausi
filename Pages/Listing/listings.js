@@ -13,8 +13,8 @@ window.onload = function(){
         ubicacionSplit = ubi.split(",");
         var posUbi = ubicacionSplit[0];
         $('.searchbar').val(posUbi);
-        $('.place').attr('filter-by',ubi);
-        $('.place').click();
+        $('.seach-button').attr('filter-by',ubi);
+        $('.seach-button').click();
         
     }
     
