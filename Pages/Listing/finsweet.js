@@ -8,7 +8,7 @@
     {filterWrapper: ".banos-filters", filterType: "exclusive", filterByClass:".banos",filterRange: true},
     {filterWrapper: ".hab-filters", filterType: "exclusive", filterByClass:".hab",filterRange: true},
     {filterWrapper: ".badge-filters", filterType: "exclusive", filterByClass:".badge",},
-    {filterWrapper: ".place-filters", filterType: "exclusive", filterByClass:".listing-address",},
+    // {filterWrapper: ".place-filters", filterType: "exclusive", filterByClass:".listing-address",},
     {filterWrapper: ".lupa-wrap", filterType: "exclusive", filterByClass:".listing-address",},
   ]
 
