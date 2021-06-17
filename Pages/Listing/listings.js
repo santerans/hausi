@@ -12,16 +12,21 @@ window.onload = function(){
             return letter.toUpperCase();
         });    
         $('.searchbar').val(lugar);
-        $('.place').attr('filter-by',lugar);
-        $('.place').click();
+        if (ubicacion === false){
+            $('.place').attr('filter-by',lugar);
+            $('.place').click();
+        }
     }
 
     if (ubicacion !== false) {
         var ubi = place.replace('-',' ').toLowerCase().replace(/\b[a-z]/g, function(letter) {
             return letter.toUpperCase();
-        });    
+        });
+        var posUbi = ubi.indexOf(',');
+        var subSUbi = posUbi.subs
         $('.place').attr('filter-by',ubi);
         $('.place').click();
+        
     }
     
     if (badge !== false) {$('.'+badge).click();}
