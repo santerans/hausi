@@ -6,17 +6,6 @@ window.onload = function(){
     var badge = getUrlParameter('badge');
     var place = getUrlParameter('lugar');
 
-//     if (place !== false) {
-//         var lugar = place.replace('-',' ').toLowerCase().replace(/\b[a-z]/g, function(letter) {
-//             return letter.toUpperCase();
-//         });    
-//        $('.searchbar').val(lugar);
-//        if (ubicacion === false){
-//            $('.place').attr('filter-by',lugar);
-//            $('.place').click();
-//        }
-//     }
-
     if (place !== false) {
         var ubi = place.replace('-',' ').toLowerCase().replace(/\b[a-z]/g, function(letter) {
             return letter.toUpperCase();
