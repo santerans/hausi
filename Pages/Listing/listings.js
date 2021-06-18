@@ -21,9 +21,15 @@ window.onload = function(){
     if (badge !== false) {$('.'+badge).click();}
 
     $('#search-output').text($('#search-input').val());
+    
     setTimeout(function(){
         generarMapa();
         $('#ok-load').text('OK');
+        $('.shimmer-skeleton').css('display', 'none');
+        $('.listing-prop-collection-wrapper').css('display', 'block');
+    },2000);
+
+    setTimeout(function(){
         $('.shimmer-skeleton').css('display', 'none');
         $('.listing-prop-collection-wrapper').css('display', 'block');
     },2000);
