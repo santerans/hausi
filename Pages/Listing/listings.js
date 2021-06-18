@@ -28,7 +28,8 @@ window.onload = function(){
     },2000);
 
     setTimeout(function(){
-        $('.shimmer-skeleton').css('display', 'none');
+        $('.shimmer-wrap').css('display', 'none');
+        $('.listing-prop-collection-wrapper').css('display', 'block');
     },2000);
 
 }
