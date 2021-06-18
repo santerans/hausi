@@ -25,6 +25,8 @@ window.onload = function(){
         generarMapa();
         $('#ok-load').text('OK');
     },2000);
+    $('.shimmer-skeleton').css('display', 'none');
+    $('.listing-prop-collection-wrapper').css('display', 'block');
 }
 
 // Botón General para mostrar filtrar y generar mapa
