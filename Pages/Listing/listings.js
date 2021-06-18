@@ -29,7 +29,7 @@ window.onload = function(){
 
     setTimeout(function(){
         $('.shimmer-wrap').css('display', 'none');
-        //$('.listing-prop-collection-wrapper').css('display', 'block');
+        $('.listing-prop-collection-wrapper').css('display', 'block');
     },2000);
 
 }
