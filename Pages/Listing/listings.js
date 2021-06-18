@@ -25,11 +25,7 @@ window.onload = function(){
     setTimeout(function(){
         generarMapa();
         $('#ok-load').text('OK');
-    },2000);
-
-    setTimeout(function(){
         $('.shimmer-wrap').css('display', 'none');
-        //$('.listing-prop-collection-wrapper').css('display', 'block');
     },2000);
 
 }
