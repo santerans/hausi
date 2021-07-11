@@ -134,4 +134,3 @@ autoUbicaciones.forEach(function(elem) {
   autoQueries.push(autoQuery,);
 });
 
-autocomplete(document.getElementById("myInput"), autoLugares,autoQueries,);

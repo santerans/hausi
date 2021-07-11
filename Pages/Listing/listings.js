@@ -38,6 +38,19 @@ $(".filter-button").click(function(){
     }
 });
 
+// Función para SEARCH BUTTON 
+
+$(".filter-button").click(function(){
+    if ($('#ok-load').text() ==='OK'){
+    setTimeout(function(){generarMapa();},500);
+    }
+});
+
+// Función para llamar a SearchBar
+
+autocomplete(document.getElementById("myInput"), autoLugares,autoQueries,);
+
+
 // Función para cerrar drop-wrapper (DIV que contiene filtros) al dar click en ventana
 
 $(document).click(function(event) {
