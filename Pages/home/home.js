@@ -23,7 +23,7 @@ function onLoadCalc() {
 // Función para SEARCH BUTTON 
 
 $(".seach-button").click(function(){
-    window.location = 'https://hausi.webflow.io/projects?badge=venta&lugar='+ $('.searchbar').attr('filter-by');
+    window.location = 'https://hausi.webflow.io/projects?badge=venta&lugar='+ $('.seach-button').attr('filter-by');
 });
 
 // Función para llamar a SearchBar
