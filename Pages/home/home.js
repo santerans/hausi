@@ -23,7 +23,8 @@ function onLoadCalc() {
 // Función para SEARCH BUTTON 
 
 $(".seach-button").click(function(){
-    window.location = 'https://hausi.biz/projects?badge=venta&lugar='+ $(this).attr('filter-by');
+    var launchValue = $(this).attr('filter-by');
+    window.location = 'https://hausi.biz/projects?badge=venta&lugar='+ launchValue;
 });
 
 // Función para llamar a SearchBar
