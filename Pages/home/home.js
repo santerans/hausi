@@ -11,5 +11,7 @@ $(".seach-button").click(function(){
 
 // Función para llamar a SearchBar
 
+var listalista = ["Quito Centro Norte","Quito Norte","Quito Sur","Tumbaco"];
+
 autocomplete(document.getElementById("myInput"), autoLugares,autoQueries,);
 autocomplete(document.getElementById("myInput2"), autoLugares,autoQueries,);
