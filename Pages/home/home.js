@@ -12,3 +12,4 @@ $(".seach-button").click(function(){
 // Función para llamar a SearchBar
 
 autocomplete(document.getElementById("myInput"), autoLugares,autoQueries,);
+autocomplete(document.getElementById("myInput2"), autoLugares,autoQueries,);
