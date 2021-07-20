@@ -56,7 +56,7 @@ $("#area").ionRangeSlider({
 
 $("#habitaciones").ionRangeSlider({
     grid: true,
-    min: 0,
+    min: 1,
     max: 5,
     from: 2,
     hide_min_max: false,
@@ -68,14 +68,14 @@ $("#habitaciones").ionRangeSlider({
 
 $("#banos").ionRangeSlider({
     grid: true,
-    min: 0,
+    min: 1,
     max: 5,
     from: 2,
     hide_min_max: false,
     decorate_both: true,
     force_edges: true,
     step: 1,
-	max_postfix:' +',
+    max_postfix:' +',
 });
 
 var $form = $("form");
