@@ -70,11 +70,11 @@ $("#banos").ionRangeSlider({
     grid: true,
     min: 0,
     max: 3,
-    from: 1.5,
+    from: 1,
     hide_min_max: false,
     decorate_both: true,
     force_edges: true,
-    step: 0.5,
+    step: 1,
 	max_postfix:' +',
 });
 
