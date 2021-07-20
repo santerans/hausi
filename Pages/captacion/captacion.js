@@ -69,8 +69,8 @@ $("#habitaciones").ionRangeSlider({
 $("#banos").ionRangeSlider({
     grid: true,
     min: 0,
-    max: 3,
-    from: 1,
+    max: 5,
+    from: 2,
     hide_min_max: false,
     decorate_both: true,
     force_edges: true,
