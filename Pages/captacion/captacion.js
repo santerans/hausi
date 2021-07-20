@@ -51,9 +51,32 @@ $("#area").ionRangeSlider({
     decorate_both: true,
     force_edges: true,
     step: 10,
-		max_postfix:' +',
+	max_postfix:' +',
 });
 
+$("#habitaciones").ionRangeSlider({
+    grid: true,
+    min: 0,
+    max: 5,
+    from: 2,
+    hide_min_max: false,
+    decorate_both: true,
+    force_edges: true,
+    step: 1,
+	max_postfix:' +',
+});
+
+$("#habitaciones").ionRangeSlider({
+    grid: true,
+    min: 0,
+    max: 3,
+    from: 1.5,
+    hide_min_max: false,
+    decorate_both: true,
+    force_edges: true,
+    step: 0.5,
+	max_postfix:' +',
+});
 
 var $form = $("form");
 $.validator.addMethod("letters", function(value, element) {
