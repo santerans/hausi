@@ -80,7 +80,7 @@ $("#banos").ionRangeSlider({
 
 var $form = $("form");
 $.validator.addMethod("phoneEC", function(value, element) {
-  return this.optional(element) || value == value.match(/[0-9\-\(\)\s]+/);
+  return this.optional(element) || value == value.match(/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/);
 });
 $form.validate({
   rules: {
@@ -94,6 +94,7 @@ $form.validate({
     },
     telefono: {
       required: true,
+      minlength: 10,
       phoneEC: true,
     },
   },
