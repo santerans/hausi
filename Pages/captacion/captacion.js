@@ -66,7 +66,7 @@ $("#habitaciones").ionRangeSlider({
 	max_postfix:' +',
 });
 
-$("#habitaciones").ionRangeSlider({
+$("#banos").ionRangeSlider({
     grid: true,
     min: 0,
     max: 3,
