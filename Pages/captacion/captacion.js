@@ -79,15 +79,14 @@ $("#banos").ionRangeSlider({
 });
 
 var $form = $("form");
-$.validator.addMethod("letters", function(value, element) {
-  return this.optional(element) || value == value.match(/^[a-zA-Z\s]*$/);
+$.validator.addMethod("phoneEC", function(value, element) {
+  return this.optional(element) || value == value.match(/[0-9\-\(\)\s]+/);
 });
 $form.validate({
   rules: {
     nombre: {
       required: true,
       minlength: 3,
-      letters: false,
     },
     email: {
       required: true,
@@ -95,7 +94,7 @@ $form.validate({
     },
     telefono: {
       required: true,
-      phone: true,
+      phoneEC: true,
     },
   },
   messages: {
