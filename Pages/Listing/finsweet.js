@@ -47,7 +47,7 @@
     resetIx: true,
     loadAll: true,
     paginate: {
-			enable: true,
+			enable: false,
 			itemsPerPage: 20,
 			insertPagination: '.pagination-container',
 			bgColor: '#FFFFFF',

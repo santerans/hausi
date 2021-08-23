@@ -108,7 +108,7 @@ $form.validate({
   messages: {
     nombre: "Por favor ingresa tu nombre correctamente",
     email: "Por favor ingresa un correo electrónico válido",
-    telefono: "Por favor ingresa un número de teléfono válido"
+    telefono: "Por favor ingresa un número de teléfono válido",
   }
 });
 

@@ -92,9 +92,9 @@ parent.find('.apply-button').attr('sort-by',sortSelected);
 
 $('.query-item').click(function() {
     var parent = $(this).closest('.query-item');
-var query = parent.find('.query-uno').text();
-$('.searchbar').val(query);
-$('.seach-button').attr('filter-by',query);
+    var query = parent.find('.query-uno').text();
+    $('.searchbar').val(query);
+    $('.seach-button').attr('filter-by',query);
 });
 
 // FUNCIONES COMPLEMENTARIAS //
