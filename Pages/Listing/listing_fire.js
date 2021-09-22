@@ -1,8 +1,5 @@
 
 
-var db = firebase.firestore();
-var coll = db.collection("listing");
-
 const getTasks = () => db.collection("listing").get();
 const onGetTasks = (callback) => db.collection("listing").onSnapshot(callback);
 const deleteTask = (id) => db.collection("listing").doc(id).delete();
