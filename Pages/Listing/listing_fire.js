@@ -14,11 +14,12 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
     onGetTasks((querySnapshot) => {
         querySnapshot.forEach((doc) => {
+        console.log(doc.data());
         const prop = doc.data();
         place_div = document.createElement("DIV");
         place_div.setAttribute("class", "place");
         place_div.appendChild(listingCard);
-        place_div.find('.property-price').text();
+        place_div.find('.property-price').text('hola');
         });
     });
 });
