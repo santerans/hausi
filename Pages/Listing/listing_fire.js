@@ -7,7 +7,7 @@ const getTask = (id) => db.collection("listing").doc(id).get();
 const updateTask = (id, updatedTask) => db.collection('listing').doc(id).update(updatedTask);
 
 window.addEventListener("DOMContentLoaded", async (e) => {
-    var listingCard = document.querySelector('listing-card').innerHTML;
+    var listingCard = document.querySelector('.listing-card').innerHTML;
 
     onGetTasks((querySnapshot) => {
         querySnapshot.forEach((doc) => {
