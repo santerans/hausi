@@ -11,7 +11,7 @@
           var num =numConvert.format(number/1000) + 'K';
         }
         else {
-          var num = numConvert.format(number);
+          var num = numConvert.format(number/1);
         }
         return num;
       }
