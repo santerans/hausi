@@ -5,6 +5,7 @@
     {filterWrapper: ".tipo-filters", filterType: "multi", filterByClass:".listing-type",},
     {filterWrapper: ".area-filters", filterType: "exclusive", filterByClass:".area-const",filterRange: true},
     {filterWrapper: ".precio-filters", filterType: "exclusive", filterByClass:".property-cost",filterRange: true},
+    {filterWrapper: ".precio-filters-renta", filterType: "exclusive", filterByClass:".property-cost",filterRange: true},
     {filterWrapper: ".banos-filters", filterType: "exclusive", filterByClass:".banos",filterRange: true},
     {filterWrapper: ".hab-filters", filterType: "exclusive", filterByClass:".hab",filterRange: true},
     {filterWrapper: ".badge-filters", filterType: "exclusive", filterByClass:".badge",},
