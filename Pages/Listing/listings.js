@@ -26,7 +26,7 @@ window.onload = function(){
         generarMapa();
         $('#ok-load').text('OK');
         $('.shimmer-wrap').css('display', 'none');
-    },0);
+    },500);
 
 }
 
