@@ -60,7 +60,6 @@ $(".menu-desplegable").change(function(){
     var max = parent.find('.max').children("option:selected").val();
     var min_text = parent.find('.min').children("option:selected").text();
     var max_text = parent.find('.max').children("option:selected").text();
-    parent.find('.apply-button').attr('filter-by',min +"-"+ max).click();
     parent.find('.boton-desplegable').text(function(i, thisText){
         if(min !== '0' &&	max === '999999999'){
             return thisText = "desde " + min_text;
@@ -71,7 +70,8 @@ $(".menu-desplegable").change(function(){
         } else {
             return thisText = min_text +" a "+ max_text;
         }
-        });
+    });
+    parent.find('.apply-button').attr('filter-by',min +"-"+ max).click();
 });
 
 //
