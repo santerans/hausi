@@ -31,6 +31,7 @@
         prices[i].innerText = numConvert.format(precio);
       }
 
+      let tempMarkers = [];
       var locations = [];
       var dynPlaces = document.querySelectorAll('.w-dyn-item.place');
 
