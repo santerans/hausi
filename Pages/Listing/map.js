@@ -85,7 +85,7 @@
           anchor: new google.maps.Point(0, 0),
         };    
       
-      function createMarker(latlng, price, anchorid, display, slideuno, slidedos,slidetres, slidecuarto, href, html) {
+      function createMarker(latlng, price, anchorid, display, slideuno, slidedos,slidetres, slidecuarto, href, html, markerClass) {
 
         var marker = new MarkerWithLabel({
           position: latlng,
@@ -95,7 +95,7 @@
           category: display,
           labelContent: price,
           labelAnchor: new google.maps.Point(-8, -12),
-          labelClass: "price-label",
+          labelClass: markerClass,
         });
         latlngbounds.extend(marker.position);   
         
@@ -136,7 +136,7 @@
       for (var i = 0; i < locations.length; i++) {
         gmarkers[locations[i][0]] =
           createMarker(new google.maps.LatLng(locations[i][2], locations[i][3]),locations[i][4],locations[i][5],locations[i][6],locations[i][7],locations[i][8],locations[i][9],locations[i][10],locations[i][11], // passing lat and long
-                                  locations[i][1]); // passing Info-window information
+                                  locations[i][1],"price-label"); // passing Info-window information
       }
 
   var styles = [{
