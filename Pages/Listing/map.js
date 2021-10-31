@@ -177,10 +177,9 @@
     $('.listing-card').hover(
       function() {
           
-          var costo = "123000.00";
-          //$(this).closest('.property-cost').text();
-          var price = "123k";
           var placeParent= $(this).closest('.listing-card');
+          var costo = placeParent.find('.property-cost').text();
+          var price = kFormatter(costo);
           var ubicacion = placeParent.find('.ubicacion').text();
           var ubicacion_array = ubicacion.split(', ');
           var lat = ubicacion_array[0];
