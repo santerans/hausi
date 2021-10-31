@@ -194,6 +194,8 @@
               createMarker(new google.maps.LatLng(pLat, pLong),price,1,2,3,4,5,6,7, // passing lat and long
                                       8,"price-label-selected"); // passing Info-window information
           }
+          setMapOnAll(map);
+
       }, 
       function() {
           setMapOnAll(null);
