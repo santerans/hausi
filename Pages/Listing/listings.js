@@ -116,3 +116,36 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
     return false;
 };
+
+// OnHover change marker class
+
+function setMapOnAll(map) {
+    for (let i = 0; i < tempMarkers.length; i++) {
+        tempMarkers[i].setMap(map);
+    }
+  }
+
+$('.place').hover(
+    function() {
+        
+        var costo = (this).find('.property-cost').text();
+        var price = kFormatter(costo);
+        var ubicacion = (this).find('.ubicacion').text();
+        var ubicacion_array = ubicacion.split(', ');
+        var lat = ubicacion_array[0];
+        var long = ubicacion_array[1];
+        var pLat = parseFloat(lat);
+        var pLong = parseFloat(long);
+
+        let tempMarkers = [];
+        for (var i = 0; i < 1; i++) {
+            tempMarkers[i] =
+            createMarker(new google.maps.LatLng(pLat, pLong),price,1,2,3,4,5,6,7, // passing lat and long
+                                    8,"price-label-selected"); // passing Info-window information
+        }
+    }, 
+    function() {
+        setMapOnAll(null);
+        tempMarkers = [];
+    }
+);
