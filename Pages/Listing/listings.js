@@ -128,9 +128,9 @@ function setMapOnAll(map) {
 $('.place').hover(
     function() {
         
-        var costo = (this).find('.property-cost').text();
+        var costo = $(this).find('.property-cost').text();
         var price = kFormatter(costo);
-        var ubicacion = (this).find('.ubicacion').text();
+        var ubicacion = $(this).find('.ubicacion').text();
         var ubicacion_array = ubicacion.split(', ');
         var lat = ubicacion_array[0];
         var long = ubicacion_array[1];
