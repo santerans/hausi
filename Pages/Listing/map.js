@@ -179,7 +179,7 @@
           
           var costo = "123000.00";
           //$(this).find('.property-cost').text();
-          var price = kFormatter(costo);
+          var price = "123k";
           var ubicacion = "-0.189887, -78.483701";
           //$(this).find('.ubicacion').text();
           var ubicacion_array = ubicacion.split(', ');
