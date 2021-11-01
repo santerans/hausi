@@ -187,7 +187,6 @@
           var pLong = parseFloat(long);
 
           let tempMarkers = [];
-          setMapOnAll(null);
           for (var i = 0; i < 1; i++) {
               tempMarkers[i] =
               createMarker(new google.maps.LatLng(pLat, pLong),price,1,2,3,4,5,6,7, // passing lat and long
@@ -196,10 +195,7 @@
 
       }, 
       function() {
-        for (let i = 0; i < 1; i++) {
-          tempMarkers[i].setMap(null);
-      }
-          tempMarkers = [];
+        $('.price-label-selected').hide();
       }
     );
 
