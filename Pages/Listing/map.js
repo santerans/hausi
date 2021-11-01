@@ -91,7 +91,7 @@
           position: latlng,
           map: map,
           url: anchorid,
-          icon: svgMarker,
+          icon: null,
           category: display,
           labelContent: price,
           labelAnchor: new google.maps.Point(-8, -12),
