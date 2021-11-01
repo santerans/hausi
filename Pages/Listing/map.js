@@ -199,7 +199,7 @@
 
       }, 
       function() {
-        $('.price-label-selected').hide();
+        $('.price-label-selected-2').hide();
       }
     );
 
