@@ -62,6 +62,8 @@
         }
       });
 
+      let tempMarkers = [];
+
       let map = new google.maps.Map(document.getElementById('map'), {
         //zoom: 15,
         center: new google.maps.LatLng(locations[0][2], locations[0][3]),
@@ -187,13 +189,18 @@
           var pLat = parseFloat(lat);
           var pLong = parseFloat(long);
 
-          let tempMarkers = [];
+          //let tempMarkers = [];
+          for (var i = 0; i < 1; i++) {
+              tempMarkers[i] =
               createMarker(new google.maps.LatLng(pLat, pLong),price,1,2,3,4,5,6,7, // passing lat and long
                                       8,"price-label-selected"); // passing Info-window information
-          tempMarkers.push(marker);
+          }
+
       }, 
       function() {
-          tempMarkers[0].setMap(null);
+        for (let i = 0; i < tempMarkers.length; i++) {
+          tempMarkers[i].setMap(null);
+      }
           tempMarkers = [];
       }
     );
