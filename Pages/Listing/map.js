@@ -195,7 +195,7 @@
 
       }, 
       function() {
-        for (let i = 0; i < tempMarkers.length; i++) {
+        for (let i = 0; i < 1; i++) {
           tempMarkers[i].setMap(null);
       }
           tempMarkers = [];
