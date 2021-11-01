@@ -1,4 +1,6 @@
     
+    let tempMarkers = [];
+    
     function generarMapa () {
     
       function kFormatter(i) {
@@ -62,9 +64,7 @@
         }
       });
 
-      let tempMarkers = [];
-
-      let map = new google.maps.Map(document.getElementById('map'), {
+        let map = new google.maps.Map(document.getElementById('map'), {
         //zoom: 15,
         center: new google.maps.LatLng(locations[0][2], locations[0][3]),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
