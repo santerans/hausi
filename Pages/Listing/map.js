@@ -177,12 +177,6 @@
 
     // OnHover change marker class
 
-    function setMapOnAll(map) {
-      for (let i = 0; i < tempMarkers.length; i++) {
-          tempMarkers[i].setMap(map);
-      }
-    }
-
     $('.listing-card').hover(
       function() {
           
@@ -200,7 +194,7 @@
           for (var i = 0; i < 1; i++) {
               tempMarkers[i] =
               createMarker(new google.maps.LatLng(pLat, pLong),price,1,svgMarker2,3,4,5,6,7, // passing lat and long
-                                      8,"price-label-selected"); // passing Info-window information
+                                      8,"price-label-selected-2"); // passing Info-window information
           }
 
       }, 
