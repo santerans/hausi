@@ -78,7 +78,7 @@
           path:
             "M0,101.08h404.308L202.151,303.229L0,101.08z",
           fillColor: "#282e38",
-          fillOpacity: 1.0,
+          fillOpacity: 0,
           strokeWeight: 0,
           rotation: 0,
           scale: 0.03,
