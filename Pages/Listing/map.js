@@ -178,7 +178,7 @@
           
           var placeParent= $(this).closest('.listing-card');
           var costo = placeParent.find('.property-cost').text();
-          var price = kFormatter(costo);
+          var price = kFormatter(costo);  
           var ubicacion = placeParent.find('.ubicacion').text();
           var ubicacion_array = ubicacion.split(', ');
           var lat = ubicacion_array[0];
@@ -187,6 +187,7 @@
           var pLong = parseFloat(long);
 
           let tempMarkers = [];
+          setMapOnAll(null);
           for (var i = 0; i < 1; i++) {
               tempMarkers[i] =
               createMarker(new google.maps.LatLng(pLat, pLong),price,1,2,3,4,5,6,7, // passing lat and long
