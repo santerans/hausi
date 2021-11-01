@@ -78,6 +78,17 @@
           path:
             "M0,101.08h404.308L202.151,303.229L0,101.08z",
           fillColor: "#282e38",
+          fillOpacity: 1.0,
+          strokeWeight: 0,
+          rotation: 0,
+          scale: 0.03,
+          anchor: new google.maps.Point(0, 0),
+        };    
+
+        const svgMarker2 = {
+          path:
+            "M0,101.08h404.308L202.151,303.229L0,101.08z",
+          fillColor: "#282e38",
           fillOpacity: 0,
           strokeWeight: 0,
           rotation: 0,
@@ -85,14 +96,13 @@
           anchor: new google.maps.Point(0, 0),
         };    
       
-      function createMarker(latlng, price, anchorid, display, slideuno, slidedos,slidetres, slidecuarto, href, html, markerClass) {
+      function createMarker(latlng, price, anchorid, svg, slideuno, slidedos,slidetres, slidecuarto, href, html, markerClass) {
 
         var marker = new MarkerWithLabel({
           position: latlng,
           map: map,
           url: anchorid,
-          icon: svgMarker,
-          category: display,
+          icon: svg,
           labelContent: price,
           labelAnchor: new google.maps.Point(-8, -12),
           labelClass: markerClass,
@@ -135,7 +145,7 @@
       let gmarkers = [];
       for (var i = 0; i < locations.length; i++) {
         gmarkers[locations[i][0]] =
-          createMarker(new google.maps.LatLng(locations[i][2], locations[i][3]),locations[i][4],locations[i][5],locations[i][6],locations[i][7],locations[i][8],locations[i][9],locations[i][10],locations[i][11], // passing lat and long
+          createMarker(new google.maps.LatLng(locations[i][2], locations[i][3]),locations[i][4],locations[i][5],svgMarker,locations[i][7],locations[i][8],locations[i][9],locations[i][10],locations[i][11], // passing lat and long
                                   locations[i][1],"price-label"); // passing Info-window information
       }
 
@@ -189,7 +199,7 @@
           let tempMarkers = [];
           for (var i = 0; i < 1; i++) {
               tempMarkers[i] =
-              createMarker(new google.maps.LatLng(pLat, pLong),price,1,2,3,4,5,6,7, // passing lat and long
+              createMarker(new google.maps.LatLng(pLat, pLong),price,1,svgMarker2,3,4,5,6,7, // passing lat and long
                                       8,"price-label-selected"); // passing Info-window information
           }
 
