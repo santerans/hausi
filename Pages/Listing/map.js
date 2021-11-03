@@ -121,6 +121,9 @@
                document.getElementById('slider3').style.backgroundImage = slidetres;
                document.getElementById('slider4').style.backgroundImage = slidecuarto;
                document.getElementById('slider5').style.backgroundImage = slidetres;
+
+               offsetCenter(marker.position,0,200);
+
           } else {
             var element = document.getElementById(anchorid);
             var bodyRect = document.body.getBoundingClientRect();
@@ -202,5 +205,23 @@
         $('.price-label-selected-2').hide();
       }
     );
+
+    function offsetCenter(latlng, offsetx, offsety) {
+
+      var scale = Math.pow(2, map.getZoom());
+
+      var worldCoordinateCenter = map.getProjection().fromLatLngToPoint(latlng);
+      var pixelOffset = new google.maps.Point((offsetx/scale) || 0,(offsety/scale) ||0);
+
+      var worldCoordinateNewCenter = new google.maps.Point(
+          worldCoordinateCenter.x - pixelOffset.x,
+          worldCoordinateCenter.y + pixelOffset.y
+      );
+
+      var newCenter = map.getProjection().fromPointToLatLng(worldCoordinateNewCenter);
+
+      map.setCenter(newCenter);
+
+    }
 
 }
