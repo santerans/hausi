@@ -123,7 +123,7 @@
                document.getElementById('slider5').style.backgroundImage = slidetres;
                marker.set("labelClass", "price-label-selected")
 
-               offsetCenter(marker.position,0,100);
+               offsetCenter(marker.position,-8,100);
 
           } else {
             var element = document.getElementById(anchorid);
