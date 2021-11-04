@@ -121,6 +121,8 @@
                document.getElementById('slider3').style.backgroundImage = slidetres;
                document.getElementById('slider4').style.backgroundImage = slidecuarto;
                document.getElementById('slider5').style.backgroundImage = slidetres;
+               $('.price-label-selected').addClass('price-label');
+               $('.price-label-selected').removeClass('price-label-selected');
                marker.set("labelClass", "price-label-selected")
 
                offsetCenter(marker.position,-8,142);
