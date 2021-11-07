@@ -27,15 +27,6 @@
 	
   projectsGrid.sort({
     sortTrigger:".sort-button-desc",
-    sortReverse: true,
-    activeClass:"sort-active",
-    animation: {
-      duration: 0
-    }
-  })
-	
-  projectsGrid.sort({
-    sortTrigger:".sort-button-asc",
     sortReverse: false,
     activeClass:"sort-active",
     animation: {
