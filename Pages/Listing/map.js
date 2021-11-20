@@ -44,9 +44,9 @@
       dynPlaces.forEach(function(elem) {
 
         var place = [];
-        var costoVenta = elem.querySelector('.property-cost').innerText;
+        var costoVenta = elem.querySelector('costo-venta').innerText;
         var priceVenta = kFormatter(costoVenta);
-        var costoRenta = elem.querySelector('.property-cost').innerText;
+        var costoRenta = elem.querySelector('costo-renta').innerText;
         var priceRenta = kFormatter(costoRenta);
         var infoText = elem.querySelector('.property-listing-bottom-wrap').innerHTML;
         var slideuno = elem.querySelector('.slide1').style.backgroundImage;
@@ -64,12 +64,12 @@
         var pLat = parseFloat(lat);
         var pLong = parseFloat(long);
 
-        if (window.getComputedStyle(elem).display !== "none" && priceVenta !== 0) {
+        if (window.getComputedStyle(elem).display !== "none" && priceVenta !== "$0") {
           place.push(title, infoText, pLat, pLong, priceVenta, anchorID, display, slideuno, slidedos, slidetres, slidecuarto, href,); // Adding required info about each place to the array of places
           locations.push(place);
         }
 
-        if (window.getComputedStyle(elem).display !== "none" && priceRenta !== 0) {
+        if (window.getComputedStyle(elem).display !== "none" && priceRenta !== "$0") {
           place.push(title, infoText, pLat, pLong, priceRenta, anchorID, display, slideuno, slidedos, slidetres, slidecuarto, href,); // Adding required info about each place to the array of places
           locations.push(place);
         }
