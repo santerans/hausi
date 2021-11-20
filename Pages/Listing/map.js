@@ -44,9 +44,9 @@
       dynPlaces.forEach(function(elem) {
 
         var place = [];
-        var costoVenta = elem.querySelector('costo-venta').innerText;
+        var costoVenta = elem.querySelector('#costo-venta').innerText;
         var priceVenta = kFormatter(costoVenta);
-        var costoRenta = elem.querySelector('costo-renta').innerText;
+        var costoRenta = elem.querySelector('#costo-renta').innerText;
         var priceRenta = kFormatter(costoRenta);
         var infoText = elem.querySelector('.property-listing-bottom-wrap').innerHTML;
         var slideuno = elem.querySelector('.slide1').style.backgroundImage;
