@@ -23,13 +23,20 @@
         minimumFractionDigits: 0,
       });
 
-      var prices = document.querySelectorAll("#price");
-      var costos = document.querySelectorAll("#costo");
+      var pricesVenta = document.querySelectorAll("#price-venta");
+      var costosVenta = document.querySelectorAll("#costo-venta");
+      var pricesRenta = document.querySelectorAll("#price-renta");
+      var costosRenta = document.querySelectorAll("#costo-renta");
 
-      for (var i = 0, len = prices.length; i < len; i++) {
-        var precio = parseFloat(costos[i].innerText);
-        prices[i].innerText = numConvert.format(precio);
+      for (var i = 0, len = pricesVenta.length; i < len; i++) {
+        var precio = parseFloat(costosVenta[i].innerText);
+        pricesVenta[i].innerText = numConvert.format(precio);
       }
+
+      for (var i = 0, len = pricesRenta.length; i < len; i++) {
+        var precio = parseFloat(costosRenta[i].innerText);
+        pricesRenta[i].innerText = numConvert.format(precio);
+      }      
 
       var locations = [];
       var dynPlaces = document.querySelectorAll('.w-dyn-item.place');
@@ -37,8 +44,10 @@
       dynPlaces.forEach(function(elem) {
 
         var place = [];
-        var costo = elem.querySelector('.property-cost').innerText;
-        var price = kFormatter(costo);
+        var costoVenta = elem.querySelector('.property-cost').innerText;
+        var priceVenta = kFormatter(costoVenta);
+        var costoRenta = elem.querySelector('.property-cost').innerText;
+        var priceRenta = kFormatter(costoRenta);
         var infoText = elem.querySelector('.property-listing-bottom-wrap').innerHTML;
         var slideuno = elem.querySelector('.slide1').style.backgroundImage;
         var slidedos = elem.querySelector('.slide2').style.backgroundImage;
@@ -55,8 +64,13 @@
         var pLat = parseFloat(lat);
         var pLong = parseFloat(long);
 
-        if (window.getComputedStyle(elem).display !== "none") {
-          place.push(title, infoText, pLat, pLong, price, anchorID, display, slideuno, slidedos, slidetres, slidecuarto, href,); // Adding required info about each place to the array of places
+        if (window.getComputedStyle(elem).display !== "none" && priceVenta !== 0) {
+          place.push(title, infoText, pLat, pLong, priceVenta, anchorID, display, slideuno, slidedos, slidetres, slidecuarto, href,); // Adding required info about each place to the array of places
+          locations.push(place);
+        }
+
+        if (window.getComputedStyle(elem).display !== "none" && priceRenta !== 0) {
+          place.push(title, infoText, pLat, pLong, priceRenta, anchorID, display, slideuno, slidedos, slidetres, slidecuarto, href,); // Adding required info about each place to the array of places
           locations.push(place);
         }
       });
