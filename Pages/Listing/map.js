@@ -201,7 +201,7 @@
       function() {
           
           var placeParent= $(this).closest('.listing-card');
-          var costo = placeParent.find('.property-cost').text();
+          var costo = placeParent.find('#costo-venta').text();
           var price = kFormatter(costo);  
           var ubicacion = placeParent.find('.ubicacion').text();
           var ubicacion_array = ubicacion.split(', ');
