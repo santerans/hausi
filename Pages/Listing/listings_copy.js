@@ -5,7 +5,7 @@ window.onload = function(){
     setTimeout(function(){
         generarMapa();
         $('#ok-load').text('OK');
-    },500);
+    },1500);
 
 }
 
