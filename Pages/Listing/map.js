@@ -112,7 +112,7 @@
       
       function createMarker(latlng, price, anchorid, svg, slideuno, slidedos,slidetres, slidecuarto, href, html, markerClass) {
 
-        var marker = new MarkerWithLabel({
+        var marker = new markerWithLabel.MarkerWithLabel({
           position: latlng,
           map: map,
           url: anchorid,
@@ -121,6 +121,7 @@
           labelAnchor: new google.maps.Point(-8, -12),
           labelClass: markerClass,
         });
+        
         latlngbounds.extend(marker.position);   
         
         google.maps.event.addListener(marker, 'click', function() {
