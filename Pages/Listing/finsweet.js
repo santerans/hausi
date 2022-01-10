@@ -34,22 +34,4 @@
     }
   })
   
-  projectsGrid.loadmore({
-		button: ".load-more-button",
-    resetIx: true,
-    loadAll: true,
-    paginate: {
-			enable: false,
-			itemsPerPage: 20,
-			insertPagination: '.pagination-container',
-			bgColor: '#FFFFFF',
-			bgColorActive: '#240c2e',
-			textColor: '#240c2e',
-      textColorActive: '#FFFFFF',
-			borderColor: '#3D315B'
-    },
-		animation: {
-			enable: false
-		}
-  })
   })();
