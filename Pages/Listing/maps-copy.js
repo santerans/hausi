@@ -112,9 +112,9 @@
         
         function createMarker(latlng, price, anchorid, svg, slideuno, slidedos,slidetres, slidecuarto, href, html, markerClass) {
   
-          var marker = new MarkerWithLabel({
+          var marker = new markerWithLabel.MarkerWithLabel({
             position: latlng,
-            map: map,
+            map: map,porp
             url: anchorid,
             icon: svg,
             labelContent: price,
