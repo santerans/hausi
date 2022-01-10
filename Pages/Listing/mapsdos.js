@@ -63,7 +63,7 @@
         }
 
         if (window.getComputedStyle(elem).display !== "none" && priceRenta !== "$0") {
-          place.push(title, pLat, pLong, priceVenta, anchorID); // Adding required info about each place to the array of places
+          place.push(title, pLat, pLong, priceRenta, anchorID); // Adding required info about each place to the array of places
           locations.push(place);
         }
       });
