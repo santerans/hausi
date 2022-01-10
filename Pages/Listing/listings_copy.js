@@ -1,9 +1,8 @@
 
 window.onload = function(){
-    
-    
+
     setTimeout(function(){
-        generarMapa();
+        generarMapa ();
         $('#ok-load').text('OK');
     },1500);
 
