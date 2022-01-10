@@ -70,7 +70,7 @@
 
         let map = new google.maps.Map(document.getElementById('map'), {
         //zoom: 15,
-        center: new google.maps.LatLng(locations[0][2], locations[0][3]),
+        center: new google.maps.LatLng(locations[0][1], locations[0][2]),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         gestureHandling: "greedy",
         streetViewControl: false,
@@ -153,7 +153,7 @@
       for (var i = 0; i < locations.length; i++) {
         gmarkers[locations[i][0]] =
           createMarker(new google.maps.LatLng(locations[i][1], locations[i][2]),locations[i][3],locations[i][4],svgMarker, // passing lat and long
-                                  locations[i][1],"price-label"); // passing Info-window information
+                                  "price-label"); // passing Info-window information
       }
 
   var styles = [{
@@ -200,8 +200,8 @@
           let tempMarkers = [];
           for (var i = 0; i < 1; i++) {
               tempMarkers[i] =
-              createMarker(new google.maps.LatLng(pLat, pLong),price,1,svgMarker2,3,4,5,6,7, // passing lat and long
-                                      8,"price-label-selected-2"); // passing Info-window information
+              createMarker(new google.maps.LatLng(pLat, pLong),price,1,svgMarker2, // passing lat and long
+                                      "price-label-selected-2"); // passing Info-window information
           }
 
       }, 
