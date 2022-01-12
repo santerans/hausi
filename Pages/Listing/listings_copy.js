@@ -1,12 +1,7 @@
 
-window.onload = function(){
-
-    setTimeout(function(){
-        generarMapa ();
-        $('#ok-load').text('OK');
-    },3000);
-
-}
+$('listing-prop-collection-list').change(function(){
+    generarMapa();
+});
 
 // Botón General para mostrar filtrar y generar mapa
 
