@@ -8,7 +8,7 @@
     {filterWrapper: ".precio-filters-renta", filterType: "exclusive", filterByClass:".p-renta",filterRange: true},
     {filterWrapper: ".banos-filters", filterType: "exclusive", filterByClass:".banos",filterRange: true},
     {filterWrapper: ".hab-filters", filterType: "exclusive", filterByClass:".hab",filterRange: true},
-    {filterWrapper: ".badge-filters", filterType: "exclusive", filterByClass:".badge",},
+    {filterWrapper: ".badge-filters", filterType: "exclusive", filterByClass:".categoria",},
     // {filterWrapper: ".place-filters", filterType: "exclusive", filterByClass:".listing-address",},
     {filterWrapper: ".lupa-wrap", filterType: "exclusive", filterByClass:".listing-address",},
   ]
