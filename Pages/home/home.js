@@ -7,7 +7,7 @@ window.addEventListener('load', onLoadCalc, false);
 $(".seach-button").click(function(){
     var launchValue = $('.searchbar').val();
     var tabvalue = $('.home-serach-tab nuevologo w-inline-block w-tab-link w--current').text();
-    window.location.href = 'https://www.hausi.io/projects?badge=' + tabvalue + '&lugar=' + launchValue;
+    window.location = 'https://www.hausi.io/projects?badge=' + tabvalue + '&lugar=' + launchValue;
 });
 
 // Función para llamar a SearchBar
