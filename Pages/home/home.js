@@ -6,7 +6,7 @@ window.addEventListener('load', onLoadCalc, false);
 
 $(".seach-button").click(function(){
     var launchValue = $('.searchbar').val();
-    var tabvalue = $('.home-serach-tab nuevologo w-inline-block w-tab-link w--current').text();
+    var tabvalue = $(".tabs-2.ui-tabs-active").text();
     window.location = 'https://www.hausi.io/listings?badge=' + tabvalue + '&lugar=' + launchValue;
 });
 
