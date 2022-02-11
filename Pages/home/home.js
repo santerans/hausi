@@ -5,7 +5,7 @@ window.addEventListener('load', onLoadCalc, false);
 // Función para SEARCH BUTTON 
 
 $(".home-serach-tab").click(function(){
-    var tabvalue = $('this').data('tab');
+    var tabvalue = $('this').attr('data-w-tab');
     $('.seach-button').attr('tipo',tabvalue);
     if(tabvalue==='Vender'){
         $("#autocomplete-comprar").hide();
