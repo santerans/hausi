@@ -4,9 +4,22 @@ window.addEventListener('load', onLoadCalc, false);
 
 // Función para SEARCH BUTTON 
 
+$(".home-serach-tab").click(function(){
+    var tabvalue = $('this').text();
+    $('.seach-button').attr('tipo');
+    if(tabvalue='Vender'){
+        $("#autocomplete-comprar").hide();
+        $("#autocomplete-vender").show();
+    }
+    else{
+        $("#autocomplete-comprar").show();
+        $("#autocomplete-vender").hide();        
+    }
+});
+
 $(".seach-button").click(function(){
     var launchValue = $('.searchbar').val();
-    var tabvalue = $(".tabs-2.ui-tabs-active").text();
+    var tabvalue = $(this).attr('tipo');
     window.location = 'https://www.hausi.io/listings?badge=' + tabvalue + '&lugar=' + launchValue;
 });
 
