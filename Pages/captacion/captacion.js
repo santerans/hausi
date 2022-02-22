@@ -80,7 +80,7 @@ $("#banos").ionRangeSlider({
 
 $("#parqueaderos").ionRangeSlider({
   grid: true,
-  min: 1,
+  min: 0,
   max: 5,
   from: 1,
   hide_min_max: false,
@@ -135,17 +135,3 @@ $form.validate({
     telefono: "Por favor ingresa un número de teléfono válido",
   }
 });
-
-
-  function ChangeUrl(page, url) {
-    if (typeof (history.pushState) != "undefined") {
-      var obj = { Page: page, Url: url };
-      history.pushState(obj, obj.Page, obj.Url);
-    } else {
-      alert("Browser does not support HTML5.");
-    }
-  }
-  
-//   $('.slider-right').click(function() {
-//   	ChangeUrl('Page1', 'Page1.htm');
-//   });
