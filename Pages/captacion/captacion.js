@@ -103,14 +103,16 @@ $("#alicuota").ionRangeSlider({
 });
 
 var $form = $("form");
-$.validator.addMethod("phoneEC", function(value, element) {
-  return this.optional(element) || value == value.match(/^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/);
-});
 
 $.validator.addMethod("alfanumerico", function (value, element) {
-    var pattern = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    var pattern = /^(?!.* (?: |$))[A-Z][a-z ]+$/;
     return this.optional(element) || pattern.test(value);
   }, "El campo debe tener un valor alfanumérico (azAZ09)");
+  
+$.validator.addMethod("phoneEC", function(value, element) {
+  var pattern = /^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+  return this.optional(element) || pattern.test(value);
+},"Por favor ingresa un teléfono válido");
 
 $form.validate({
   rules: {
