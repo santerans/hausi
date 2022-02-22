@@ -97,6 +97,14 @@ $('.query-item').click(function() {
     $('.seach-button').attr('filter-by',query);
 });
 
+$('#boton-venta').click(function() {
+    $('#limpiar-venta').click();
+});
+
+$('#boton-renta').click(function() {
+    $('#limpiar-renta').click();
+});
+
 // FUNCIONES COMPLEMENTARIAS //
 
 // Función para actualizar parámetros

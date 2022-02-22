@@ -4,9 +4,23 @@ window.addEventListener('load', onLoadCalc, false);
 
 // Función para SEARCH BUTTON 
 
+$(".home-serach-tab").click(function(){
+    var tabvalue = $('this').attr('data-w-tab');
+    $('.seach-button').attr('tipo',tabvalue);
+    if(tabvalue==='Vender'){
+        $("#autocomplete-comprar").hide();
+        $("#autocomplete-vender").show();
+    }
+    else{
+        $("#autocomplete-comprar").show();
+        $("#autocomplete-vender").hide();        
+    }
+});
+
 $(".seach-button").click(function(){
     var launchValue = $('.searchbar').val();
-    window.location = 'https://hausi.biz/projects?badge=venta&lugar='+ launchValue;
+    var tabvalue = $(this).attr('tipo');
+    window.location = 'https://www.hausi.io/listings?badge=' + tabvalue + '&lugar=' + launchValue;
 });
 
 // Función para llamar a SearchBar
