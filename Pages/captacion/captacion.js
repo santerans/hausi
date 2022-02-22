@@ -104,11 +104,11 @@ $("#alicuota").ionRangeSlider({
 
 var $form = $("form");
 $.validator.addMethod("phoneEC", function(value, element) {
-  return this.optional(element) || value == value.match(/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/);
+  return this.optional(element) || value == value.match("/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/");
 });
 
 $.validator.addMethod("alfanumerico", function (value, element) {
-    var pattern = /^[\w]+$/i;
+    var pattern = "/^[\w]+$/i";
     return this.optional(element) || pattern.test(value);
   }, "El campo debe tener un valor alfanumérico (azAZ09)");
 
