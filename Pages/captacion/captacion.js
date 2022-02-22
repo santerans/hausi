@@ -78,6 +78,30 @@ $("#banos").ionRangeSlider({
     max_postfix:' +',
 });
 
+$("#parqueaderos").ionRangeSlider({
+  grid: true,
+  min: 1,
+  max: 5,
+  from: 1,
+  hide_min_max: false,
+  decorate_both: true,
+  force_edges: true,
+  step: 1,
+  max_postfix:' +',
+});
+
+$("#alicuota").ionRangeSlider({
+  grid: true,
+  min: 0,
+  max: 200,
+  from: 40,
+  hide_min_max: false,
+  decorate_both: true,
+  force_edges: true,
+  step: 20,
+  max_postfix:' +',
+});
+
 var $form = $("form");
 $.validator.addMethod("phoneEC", function(value, element) {
   return this.optional(element) || value == value.match(/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/);
