@@ -127,7 +127,6 @@ $form.validate({
     telefono: {
       required: true,
       minlength: 10,
-      phoneUS: true,
     },
   },
   messages: {
