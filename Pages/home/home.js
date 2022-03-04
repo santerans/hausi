@@ -2,6 +2,8 @@
 
 window.addEventListener('load', onLoadCalc, false);
 
+// Función para mover Carrousel
+
 // Función para SEARCH BUTTON 
 
 $(".home-serach-tab").click(function(){
