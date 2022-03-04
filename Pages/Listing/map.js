@@ -49,10 +49,10 @@
         var costoRenta = elem.querySelector('#costo-renta').innerText;
         var priceRenta = kFormatter(costoRenta);
         var infoText = elem.querySelector('.property-listing-bottom-wrap').innerHTML;
-        var slideuno = elem.querySelector('.slide1').style.backgroundImage;
-        var slidedos = elem.querySelector('.slide2').style.backgroundImage;
-        var slidetres = elem.querySelector('.slide3').style.backgroundImage;
-        var slidecuarto = elem.querySelector('.slide4').style.backgroundImage;
+        var slideuno = elem.querySelector('#slide1').style.backgroundImage;
+        var slidedos = elem.querySelector('#slide2').style.backgroundImage;
+        var slidetres = elem.querySelector('#slide3').style.backgroundImage;
+        var slidecuarto = elem.querySelector('#slide4').style.backgroundImage;
         var href = elem.querySelector('.property-card-link').href;
         var display = elem.style.display;
         var ubicacion = elem.querySelector('.ubicacion').innerText;
@@ -131,11 +131,11 @@
                document.getElementById('house').style.display = "block";
                document.getElementById('house-detail').innerHTML = html;
                document.getElementById('property-card-link').href = href;
-               document.getElementById('slider1').style.backgroundImage = slideuno;
-               document.getElementById('slider2').style.backgroundImage = slidedos;
-               document.getElementById('slider3').style.backgroundImage = slidetres;
-               document.getElementById('slider4').style.backgroundImage = slidecuarto;
-               document.getElementById('slider5').style.backgroundImage = slidetres;
+               document.getElementById('slider6').style.backgroundImage = slideuno;
+               document.getElementById('slider7').style.backgroundImage = slidedos;
+               document.getElementById('slider8').style.backgroundImage = slidetres;
+               document.getElementById('slider9').style.backgroundImage = slidecuarto;
+               document.getElementById('slider10').style.backgroundImage = slidetres;
                $('.price-label-selected').addClass('price-label');
                $('.price-label-selected').removeClass('price-label-selected');
                marker.set("labelClass", "price-label-selected")
