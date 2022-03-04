@@ -61,8 +61,6 @@ function autocomplete(inp, arr, query) {
             inp.value = this.getElementsByTagName("input")[0].value;
             $('.seach-button').attr('filter-by',this.getElementsByTagName("input")[1].value);
             $('#radio-text').text(this.getElementsByTagName("input")[1].value);
-            
-            $('#lugares > option[value="'+this.getElementsByTagName("input")[1].value+'"]').attr("selected",true);
             closeAllLists();
           });
           a.appendChild(b);
