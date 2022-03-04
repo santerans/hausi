@@ -28,7 +28,7 @@ function autocomplete(inp, arr, query) {
         b.addEventListener("click", function(e) {
           inp.value = this.getElementsByTagName("input")[0].value;
           $('.seach-button').attr('filter-by',this.getElementsByTagName("input")[1].value);
-          $('#lugares > option[value="'+this.getElementsByTagName("input")[1].value+'"]').attr("selected",true);
+          $('#radio-text').text('filter-by',this.getElementsByTagName("input")[1].value);
           closeAllLists();
         });
         a.appendChild(b);
@@ -60,6 +60,8 @@ function autocomplete(inp, arr, query) {
           b.addEventListener("click", function(e) {
             inp.value = this.getElementsByTagName("input")[0].value;
             $('.seach-button').attr('filter-by',this.getElementsByTagName("input")[1].value);
+            $('#radio-text').text('filter-by',this.getElementsByTagName("input")[1].value);
+            
             $('#lugares > option[value="'+this.getElementsByTagName("input")[1].value+'"]').attr("selected",true);
             closeAllLists();
           });
