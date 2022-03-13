@@ -19,12 +19,6 @@ $(".home-serach-tab").click(function(){
     }
 });
 
-$(".seach-button").click(function(){
-    var launchValue = $('.searchbar').val();
-    var tabvalue = $(this).attr('tipo');
-    window.location = 'https://www.hausi.io/listings?badge=' + tabvalue + '&lugar=' + launchValue;
-});
-
 // Función para llamar a SearchBar
 
 var listalista = ["Quito Centro Norte","Quito Norte","Quito Sur","Tumbaco"];
