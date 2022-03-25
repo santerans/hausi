@@ -73,7 +73,7 @@
           place.push(title, infoText, pLat, pLong, priceRenta, anchorID, display, slideuno, slidedos, slidetres, slidecuarto, href,); // Adding required info about each place to the array of places
           locations.push(place);
         }
-      } 
+      }); 
 
         let map = new google.maps.Map(document.getElementById('map'), {
         //zoom: 15,
