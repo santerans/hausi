@@ -63,9 +63,9 @@
         var anchorID = elem.querySelector('.anchor-id').getAttribute('id');
         var pLat = parseFloat(lat);
         var pLong = parseFloat(long);
-        var badge = getUrlParameter('badge');
+        var tipo = getUrlParameter('tipo');
 
-        if (badge === 'venta') {
+        if (tipo === 'venta') {
           place.push(title, infoText, pLat, pLong, priceVenta, anchorID, display, slideuno, slidedos, slidetres, slidecuarto, href,); // Adding required info about each place to the array of places        
         }else{
           place.push(title, infoText, pLat, pLong, priceRenta, anchorID, display, slideuno, slidedos, slidetres, slidecuarto, href,); // Adding required info about each place to the array of places        
