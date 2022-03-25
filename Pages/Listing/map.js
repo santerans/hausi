@@ -63,20 +63,18 @@
         var anchorID = elem.querySelector('.anchor-id').getAttribute('id');
         var pLat = parseFloat(lat);
         var pLong = parseFloat(long);
+        var badge = getUrlParameter('badge');
 
-        if (window.getComputedStyle(elem).display !== "none" && priceVenta !== "$0") {
-          place.push(title, infoText, pLat, pLong, priceVenta, anchorID, display, slideuno, slidedos, slidetres, slidecuarto, href,); // Adding required info about each place to the array of places
-          locations.push(place);
+        if (badge === 'venta') {
+          place.push(title, infoText, pLat, pLong, priceVenta, anchorID, display, slideuno, slidedos, slidetres, slidecuarto, href,); // Adding required info about each place to the array of places        
+        }else{
+          place.push(title, infoText, pLat, pLong, priceRenta, anchorID, display, slideuno, slidedos, slidetres, slidecuarto, href,); // Adding required info about each place to the array of places        
         }
 
-        if (window.getComputedStyle(elem).display !== "none" && priceRenta !== "$0") {
-          place.push(title, infoText, pLat, pLong, priceRenta, anchorID, display, slideuno, slidedos, slidetres, slidecuarto, href,); // Adding required info about each place to the array of places
-          locations.push(place);
-        }
       }); 
 
         let map = new google.maps.Map(document.getElementById('map'), {
-        //zoom: 15,
+        zoom: 15,
         center: new google.maps.LatLng(locations[0][2], locations[0][3]),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         gestureHandling: "greedy",
