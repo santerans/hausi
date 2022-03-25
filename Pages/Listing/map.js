@@ -73,7 +73,7 @@
           place.push(title, infoText, pLat, pLong, priceRenta, anchorID, display, slideuno, slidedos, slidetres, slidecuarto, href,); // Adding required info about each place to the array of places
           locations.push(place);
         }
-      });
+      } 
 
         let map = new google.maps.Map(document.getElementById('map'), {
         //zoom: 15,
@@ -135,7 +135,7 @@
                document.getElementById('slider7').style.backgroundImage = slidedos;
                document.getElementById('slider8').style.backgroundImage = slidetres;
                document.getElementById('slider9').style.backgroundImage = slidecuarto;
-               document.getElementById('slider10').style.backgroundImage = slidetres;
+               document.getElementById('slider10').style.backgroundImage = slidecuarto;
                $('.price-label-selected').addClass('price-label');
                $('.price-label-selected').removeClass('price-label-selected');
                marker.set("labelClass", "price-label-selected")
