@@ -1,5 +1,5 @@
 
-$('listing-prop-collection-list').change(function(){
+/*$('listing-prop-collection-list').change(function(){
     generarMapa();
 });
 
@@ -9,7 +9,7 @@ $(".filter-button").click(function(){
     if ($('#ok-load').text() ==='OK'){
     setTimeout(function(){generarMapa();},500);
     }
-});
+}); */
 
 // Función para llamar a SearchBar
 
