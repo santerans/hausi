@@ -1,8 +1,8 @@
 //FORMATEAR TEXTO
 $("input[data-type='currency']").on({
-//    keyup: function() {
-//      formatCurrency($(this));
-//    },
+    change: function() {
+      formatCurrency($(this));
+    },
     blur: function() { 
       formatCurrency($(this), "blur");
     }
