@@ -34,6 +34,7 @@ const getProperties = async () => {
 };
 
 const createCard = (property) => {
+  console.log("create card");
   const cardTemplate = document.getElementsByClassName("listing-card")[0];
   const newCard = cardTemplate.cloneNode(true);
   newCard.setAttribute("id", property.id);
@@ -113,7 +114,7 @@ const initMap = () => {
 };
 
 const createMarker = (property) => {
-  console.log("crating marker");
+  console.log("crate marker");
   const latitude = parseFloat(property.split(",")[0]);
   const longitude = parseFloat(property.split(",")[1].trim());
   const latlng = new google.maps.LatLng(latitude, longitude);
