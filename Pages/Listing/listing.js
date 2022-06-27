@@ -33,7 +33,6 @@ const getProperties = async () => {
 };
 
 const createCard = (property) => {
-  console.log("lol");
   const cardTemplate = document.getElementsByClassName("listing-card")[0];
   const newCard = cardTemplate.cloneNode(true);
   newCard.setAttribute("id", property.id);
@@ -52,7 +51,7 @@ const createCard = (property) => {
     property.data.areaTotal;
   newCard.childNodes[1].childNodes[3].childNodes[0].innerText =
     property.data.sectores;
-  createSwiper(newCard);
+  createSwiper(newCard, property);
   return newCard;
 };
 
