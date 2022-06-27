@@ -19,8 +19,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const docs = await getDocs(collection(db, "listing"));
+const properties = [];
 const cardsWrapper = document.getElementById("cards-wrapper");
 const cardTemplate = document.getElementsByClassName("listing-card")[0];
+
 const createCard = () => {
   console.log("lol");
   const newCard = cardTemplate.cloneNode(true);
@@ -43,6 +45,7 @@ const createCard = () => {
   createSwiper(newCard);
   return newCard;
 };
+
 const createSwiper = (newCard, property) => {
   const newSwiper = newCard.childNodes[0].childNodes[0];
   const swiperWrapper = newSwiper.childNodes[0];
@@ -63,6 +66,7 @@ const createSwiper = (newCard, property) => {
     swiperWrapper.append(newSwiperSlide);
   });
 };
+
 const initSwiper = (property) => {
   new Swiper(`.swiper${property.id}`, {
     cssMode: true,
@@ -82,6 +86,7 @@ const initSwiper = (property) => {
 
 docs.forEach((doc) => {
   const property = { id: doc.id, data: doc.data() };
+  properties.push(property);
   const newCard = createCard();
   cardsWrapper.appendChild(newCard);
   initSwiper(property);
