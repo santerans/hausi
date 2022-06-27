@@ -60,6 +60,7 @@ const createCard = (property) => {
     property.data.sectores;
   createSwiper(newCard, property);
   createMarker(property);
+  console.log("a", newCard);
   return newCard;
 };
 
