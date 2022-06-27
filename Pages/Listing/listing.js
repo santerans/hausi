@@ -26,13 +26,13 @@ const getProperties = async () => {
   docs.forEach((doc) => {
     const property = { id: doc.id, data: doc.data() };
     properties.push(property);
-    const newCard = createCard();
+    const newCard = createCard(property);
     cardsWrapper.appendChild(newCard);
     initSwiper(property);
   });
 };
 
-const createCard = () => {
+const createCard = (property) => {
   console.log("lol");
   const cardTemplate = document.getElementsByClassName("listing-card")[0];
   const newCard = cardTemplate.cloneNode(true);
@@ -97,7 +97,7 @@ const initSwiper = (property) => {
 const initMap = () => {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
-    center: new google.maps.LatLng(locations[0][2], locations[0][3]),
+    center: new google.maps.LatLng(-0.208946, -78.507751),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     gestureHandling: "greedy",
     streetViewControl: false,
@@ -107,6 +107,6 @@ const initMap = () => {
   });
 };
 
-getProperties();
+await getProperties();
 initMap();
 window.initMap = initMap;
