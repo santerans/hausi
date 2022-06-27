@@ -28,6 +28,7 @@ const getProperties = async () => {
     const property = { id: doc.id, data: doc.data() };
     properties.push(property);
     const newCard = createCard(property);
+    console.log(newCard);
     cardsWrapper.appendChild(newCard);
     initSwiper(property);
   });
