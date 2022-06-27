@@ -115,8 +115,8 @@ const initMap = () => {
 
 const createMarker = (property) => {
   console.log("crate marker");
-  const latitude = parseFloat(property.split(",")[0]);
-  const longitude = parseFloat(property.split(",")[1].trim());
+  const latitude = parseFloat(property.data.ubicacion.split(",")[0]);
+  const longitude = parseFloat(property.data.ubicacion.split(",")[1].trim());
   const latlng = new google.maps.LatLng(latitude, longitude);
   const svgMarker = {
     path: "M0,101.08h404.308L202.151,303.229L0,101.08z",
