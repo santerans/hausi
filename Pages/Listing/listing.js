@@ -19,12 +19,31 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const docs = await getDocs(collection(db, "listing"));
-let properties = [];
 const cardsWrapper = document.getElementById("cards-wrapper");
 const cardTemplate = document.getElementsByClassName("listing-card")[0];
-docs.forEach((doc) => {
-  const property = { id: doc.id, data: doc.data() };
+const createCard = () => {
+  console.log("lol");
   const newCard = cardTemplate.cloneNode(true);
+  newCard.setAttribute("id", property.id);
+  newCard.style.display = "initial";
+  newCard.childNodes[1].childNodes[0].innerText = property.data.nombre;
+  newCard.childNodes[1].childNodes[1].childNodes[0].childNodes[0].childNodes[1].innerText =
+    property.data.tipoComercializacion;
+  newCard.childNodes[1].childNodes[1].childNodes[0].childNodes[1].childNodes[0].innerText = `$ ${property.data.precioVenta}`;
+  newCard.childNodes[1].childNodes[2].childNodes[0].childNodes[1].innerText =
+    property.data.habitaciones;
+  newCard.childNodes[1].childNodes[2].childNodes[2].childNodes[1].innerText =
+    property.data.banos;
+  newCard.childNodes[1].childNodes[2].childNodes[4].childNodes[1].innerText =
+    property.data.parqueaderos;
+  newCard.childNodes[1].childNodes[2].childNodes[6].childNodes[1].innerText =
+    property.data.areaTotal;
+  newCard.childNodes[1].childNodes[3].childNodes[0].innerText =
+    property.data.sectores;
+  createSwiper(newCard);
+  return newCard;
+};
+const createSwiper = (newCard, property) => {
   const newSwiper = newCard.childNodes[0].childNodes[0];
   const swiperWrapper = newSwiper.childNodes[0];
   const swiperPrev = newSwiper.childNodes[1];
@@ -43,23 +62,8 @@ docs.forEach((doc) => {
     newSwiperSlide.style.display = "block";
     swiperWrapper.append(newSwiperSlide);
   });
-  newCard.setAttribute("id", property.id);
-  newCard.style.display = "initial";
-  newCard.childNodes[1].childNodes[0].innerText = property.data.nombre;
-  newCard.childNodes[1].childNodes[1].childNodes[0].childNodes[0].childNodes[1].innerText =
-    property.data.tipoComercializacion;
-  newCard.childNodes[1].childNodes[1].childNodes[0].childNodes[1].childNodes[0].innerText = `$ ${property.data.precioVenta}`;
-  newCard.childNodes[1].childNodes[2].childNodes[0].childNodes[1].innerText =
-    property.data.habitaciones;
-  newCard.childNodes[1].childNodes[2].childNodes[2].childNodes[1].innerText =
-    property.data.banos;
-  newCard.childNodes[1].childNodes[2].childNodes[4].childNodes[1].innerText =
-    property.data.parqueaderos;
-  newCard.childNodes[1].childNodes[2].childNodes[6].childNodes[1].innerText =
-    property.data.areaTotal;
-  newCard.childNodes[1].childNodes[3].childNodes[0].innerText =
-    property.data.sectores;
-  cardsWrapper.appendChild(newCard);
+};
+const initSwiper = (property) => {
   new Swiper(`.swiper${property.id}`, {
     cssMode: true,
     navigation: {
@@ -74,4 +78,11 @@ docs.forEach((doc) => {
     // Enable lazy loading
     lazy: true,
   });
+};
+
+docs.forEach((doc) => {
+  const property = { id: doc.id, data: doc.data() };
+  const newCard = createCard();
+  cardsWrapper.appendChild(newCard);
+  initSwiper(property);
 });
