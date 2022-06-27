@@ -17,24 +17,24 @@ const firebaseConfig = {
   measurementId: "G-HBWG75CFRH",
 };
 
-const getProperties = () => {
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const docs = await getDocs(collection(db, "listing"));
-const properties = [];
-const cardsWrapper = document.getElementById("cards-wrapper");
-docs.forEach((doc) => {
-  const property = { id: doc.id, data: doc.data() };
-  properties.push(property);
-  const newCard = createCard();
-  cardsWrapper.appendChild(newCard);
-  initSwiper(property);
-});
-}
+const getProperties = async () => {
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const docs = await getDocs(collection(db, "listing"));
+  const properties = [];
+  const cardsWrapper = document.getElementById("cards-wrapper");
+  docs.forEach((doc) => {
+    const property = { id: doc.id, data: doc.data() };
+    properties.push(property);
+    const newCard = createCard();
+    cardsWrapper.appendChild(newCard);
+    initSwiper(property);
+  });
+};
 
 const createCard = () => {
   console.log("lol");
-const cardTemplate = document.getElementsByClassName("listing-card")[0];
+  const cardTemplate = document.getElementsByClassName("listing-card")[0];
   const newCard = cardTemplate.cloneNode(true);
   newCard.setAttribute("id", property.id);
   newCard.style.display = "initial";
@@ -95,19 +95,18 @@ const initSwiper = (property) => {
 };
 
 const initMap = () => {
-   const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: new google.maps.LatLng(locations[0][2], locations[0][3]),
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        gestureHandling: "greedy",
-        streetViewControl: false,
-        fullscreenControl: false,
-        mapTypeControl: false,
-        mapId: '7165bcdc8480f69d',
-      });
-}
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: new google.maps.LatLng(locations[0][2], locations[0][3]),
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    gestureHandling: "greedy",
+    streetViewControl: false,
+    fullscreenControl: false,
+    mapTypeControl: false,
+    mapId: "7165bcdc8480f69d",
+  });
+};
 
 getProperties();
 initMap();
 window.initMap = initMap;
-
