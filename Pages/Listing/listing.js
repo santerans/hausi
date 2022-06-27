@@ -16,6 +16,7 @@ const firebaseConfig = {
   appId: "1:651355672556:web:eb2425fdc2114f37d23ac9",
   measurementId: "G-HBWG75CFRH",
 };
+let map;
 
 const getProperties = async () => {
   const app = initializeApp(firebaseConfig);
@@ -40,7 +41,11 @@ const createCard = (property) => {
   newCard.childNodes[1].childNodes[0].innerText = property.data.nombre;
   newCard.childNodes[1].childNodes[1].childNodes[0].childNodes[0].childNodes[1].innerText =
     property.data.tipoComercializacion;
-  newCard.childNodes[1].childNodes[1].childNodes[0].childNodes[1].childNodes[0].innerText = `$ ${property.data.precioVenta}`;
+  newCard.childNodes[1].childNodes[1].childNodes[0].childNodes[1].childNodes[0].innerText = `$ ${
+    property.data.precioVenta === 0
+      ? property.data.precioRenta
+      : property.data.precioVenta
+  }`;
   newCard.childNodes[1].childNodes[2].childNodes[0].childNodes[1].innerText =
     property.data.habitaciones;
   newCard.childNodes[1].childNodes[2].childNodes[2].childNodes[1].innerText =
@@ -52,6 +57,7 @@ const createCard = (property) => {
   newCard.childNodes[1].childNodes[3].childNodes[0].innerText =
     property.data.sectores;
   createSwiper(newCard, property);
+  createMarker(property);
   return newCard;
 };
 
@@ -94,7 +100,7 @@ const initSwiper = (property) => {
 };
 
 const initMap = () => {
-  const map = new google.maps.Map(document.getElementById("map"), {
+  map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
     center: new google.maps.LatLng(-0.208946, -78.507751),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -103,6 +109,33 @@ const initMap = () => {
     fullscreenControl: false,
     mapTypeControl: false,
     mapId: "7165bcdc8480f69d",
+  });
+};
+
+const createMarker = (property) => {
+  const latitude = parseFloat(property.split(",")[0]);
+  const longitude = parseFloat(property.split(",")[1].trim());
+  const latlng = new google.maps.LatLng(latitude, longitude);
+  const svgMarker = {
+    path: "M0,101.08h404.308L202.151,303.229L0,101.08z",
+    fillColor: "#282e38",
+    fillOpacity: 1.0,
+    strokeWeight: 0,
+    rotation: 0,
+    scale: 0.03,
+    anchor: new google.maps.Point(0, 0),
+  };
+  const marker = new markerWithLabel.MarkerWithLabel({
+    position: latlng,
+    map: map,
+    url: property.id,
+    icon: svgMarker,
+    labelContent:
+      property.data.precioVenta === 0
+        ? property.data.precioRenta
+        : property.data.precioVenta,
+    labelAnchor: new google.maps.Point(-8, -12),
+    labelClass: "price-label",
   });
 };
 
