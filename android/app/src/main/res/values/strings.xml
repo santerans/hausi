@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">HausiNuevo</string>
+    <string name="facebook_app_id">5194605277297992</string>
+               <string name="fb_login_protocol_scheme">fb5194605277297992</string>
+</resources>

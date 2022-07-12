@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "651355672556",
+    "firebase_url": "https://hausiweb.firebaseio.com",
+    "project_id": "hausiweb",
+    "storage_bucket": "hausiweb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651355672556:android:ea0fc2d6b801bf7fd23ac9",
+        "android_client_info": {
+          "package_name": "com.mycompany.hausiconsumidorapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651355672556-7k3lf4d5eq8d4adat43t2cg7uvq6ioem.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.hausiconsumidorapp",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "651355672556-po6je7no3m62lsk493k6rm7n1kqtvsgi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.hausiconsumidorapp",
+            "certificate_hash": "c322552b33489d0bd62121fa659985b66c709140"
+          }
+        },
+        {
+          "client_id": "651355672556-u0v9f9f466o5jgmbjevj6epbl2o0fq2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGYOsaTZdQIEB90WAHtlrKfKXq_hq0QxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651355672556-talurutq0d1222v36e0vacofa36mnfob.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "651355672556-5hstunl5mtvrkgj63j84uvc4n7ho94c0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.hausiconsumidorapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
