@@ -37,7 +37,7 @@ $("#precio-renta").ionRangeSlider({
     hide_min_max: false,
     decorate_both: true,
     force_edges: true,
-    step: 10,
+    step: 50,
     max_postfix:'+',
 });
 
