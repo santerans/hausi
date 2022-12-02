@@ -24,9 +24,10 @@
       });
 
       var pricesVenta = document.querySelectorAll("#price-venta");
+	var costosVenta = document.querySelectorAll("#costo-venta");
 
       for (var i = 0, len = pricesVenta.length; i < len; i++) {
-        var precio = parseFloat(pricesVenta[i].innerText);
+        var precio = parseFloat(costosVenta[i].innerText);
         pricesVenta[i].innerText = numConvert.format(precio);
       }
 
