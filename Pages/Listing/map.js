@@ -32,7 +32,7 @@
       }
 
       var locations = [];
-      var dynPlaces = document.querySelectorAll('.w-dyn-item.place');
+      var dynPlaces = $('.w-dyn-item.place:visible');
 
       dynPlaces.forEach(function(elem) {
 
