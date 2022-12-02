@@ -11,6 +11,7 @@
     {filterWrapper: ".badge-filters", filterType: "exclusive", filterByClass:".categoria",},
     // {filterWrapper: ".place-filters", filterType: "exclusive", filterByClass:".listing-address",},
     {filterWrapper: ".lupa-wrap", filterType: "exclusive", filterByClass:".listing-address",},
+	{filterWrapper: ".lupa-wrap", filterType: "exclusive", filterByClass:".listing-address-2",},
   ]
 
 	projectsGrid.filter({
