@@ -23,20 +23,12 @@
         minimumFractionDigits: 0,
       });
 
-      //var pricesVenta = document.querySelectorAll("#price-venta");
-      var costosVenta = document.querySelectorAll("#costo-venta");
-      //var pricesRenta = document.querySelectorAll("#price-renta");
-      var costosRenta = document.querySelectorAll("#costo-renta");
+      var pricesVenta = document.querySelectorAll("#price-venta");
 
-      /*for (var i = 0, len = pricesVenta.length; i < len; i++) {
+      for (var i = 0, len = pricesVenta.length; i < len; i++) {
         var precio = parseFloat(costosVenta[i].innerText);
         pricesVenta[i].innerText = numConvert.format(precio);
-      } 
-
-      for (var i = 0, len = pricesRenta.length; i < len; i++) {
-        var precio = parseFloat(costosRenta[i].innerText);
-        pricesRenta[i].innerText = numConvert.format(precio);
-      }     */ 
+      }
 
       var locations = [];
       var dynPlaces = document.querySelectorAll('.w-dyn-item.place');
@@ -46,8 +38,6 @@
         var place = [];
         var costoVenta = elem.querySelector('#costo-venta').innerText;
         var priceVenta = kFormatter(costoVenta);
-        var costoRenta = elem.querySelector('#costo-renta').innerText;
-        var priceRenta = kFormatter(costoRenta);
         var infoText = elem.querySelector('.property-listing-bottom-wrap').innerHTML;
         var slideuno = elem.querySelector('#slide1').style.backgroundImage;
         var slidedos = elem.querySelector('#slide2').style.backgroundImage;
