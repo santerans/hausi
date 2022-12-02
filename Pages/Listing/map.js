@@ -26,7 +26,7 @@
       var pricesVenta = document.querySelectorAll("#price-venta");
 
       for (var i = 0, len = pricesVenta.length; i < len; i++) {
-        var precio = parseFloat(costosVenta[i].innerText);
+        var precio = parseFloat(pricesVenta[i].innerText);
         pricesVenta[i].innerText = numConvert.format(precio);
       }
 
