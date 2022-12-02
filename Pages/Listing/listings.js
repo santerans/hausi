@@ -71,7 +71,7 @@ $(".menu-desplegable").change(function(){
             return thisText = min_text +" a "+ max_text;
         }
     });
-    parent.find('.apply-button').attr('filter-by',min +"-"+ max).click();
+    //parent.find('.apply-button').attr('filter-by',min +"-"+ max).click();
 });
 
 //
