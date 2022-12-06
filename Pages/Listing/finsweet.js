@@ -10,8 +10,7 @@
     {filterWrapper: ".hab-filters", filterType: "exclusive", filterByClass:".hab",filterRange: true},
     {filterWrapper: ".badge-filters", filterType: "exclusive", filterByClass:".categoria",},
     // {filterWrapper: ".place-filters", filterType: "exclusive", filterByClass:".listing-address",},
-    {filterWrapper: ".lupa-wrap", filterType: "multi", filterByClass:".listing-address",},
-	{filterWrapper: ".lupa-wrap", filterType: "multi", filterByClass:".listing-address-2",},
+    {filterWrapper: ".lupa-wrap", filterType: "exclusive", filterByClass:".listing-address",},
   ]
 
 	projectsGrid.filter({
